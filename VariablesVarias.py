@@ -7,5 +7,5 @@ ancho = float(input("ancho del rectangulo"))
 print("El area del rectanguloes:", end = "")
 print(area_rectangulo(largo, ancho))
 
-print 
+print (area_rectangulo)
 
