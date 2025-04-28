@@ -1,0 +1,60 @@
+
+
+# Johan Andres Jimenez Muñoz 
+
+
+import math
+
+def area_rectangulo(b, a):
+    return b * a
+
+def area_circulo(r):
+    return math.pi * r ** 2
+
+def volumen_solido(r1, r2, h):
+    volumen_semiesfera = (2/3) * math.pi * (r1 ** 3)
+    volumen_cono = (1/3) * math.pi * h * (r1**2 + r1*r2 + r2**2)
+    return volumen_semiesfera + volumen_cono
+
+def area_lateral_vagon(a, b):
+    return a * b
+
+def area_lateral_carro(b1, a1, b2, a2, r):
+    area_grande = area_rectangulo(b1, a1)
+    area_pequeno = area_rectangulo(b2, a2)
+    area_ruedas = 2 * area_circulo(r)
+    return area_grande + area_pequeno + area_ruedas
+
+def carne_aves(N, M, K):
+    return (N * 6) + (M * 7) + (K * 1)
+
+def dinero_restante(P, M, H, B):
+    total = (P * 300) + (M * 3300) + (H * 350)
+    return B - total
+
+def prestamo_interes_compuesto(P):
+    tasa = 0.03
+    meses = 2
+    return P * (1 + tasa) ** meses
+
+def contagios_totales(C, D):
+    return C * (2 ** D)
+
+print ("____________________________________________________")
+
+print("#1 ) Volumen del sólido: ", volumen_solido(3, 4, 9/2), "m³")
+print ("____________________________________________________")
+print("#2 ) Área lateral del vagón: ", area_lateral_vagon(2.5, 6.0), "m²")
+print ("____________________________________________________")
+print("#3 ) Área lateral del carro: ", area_lateral_carro(6, 2, 4, 1.5, 0.5), "m²")
+print ("____________________________________________________")
+print("#4 ) Carne total (aves): ", carne_aves(3, 2, 5), "kg")
+print ("____________________________________________________")
+print("#5 ) Vuelto o deuda: $", dinero_restante(2, 1, 6, 10000))
+print ("____________________________________________________")
+print("#6 ) Deuda con interés compuesto: $", prestamo_interes_compuesto(10000))
+print ("____________________________________________________")
+print("#7 ) Contagios después de 5 días: ", contagios_totales(10, 5), "contagiados")
+print ("____________________________________________________")
+
+    
